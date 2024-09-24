@@ -1,6 +1,8 @@
 # CryptoClustering
+Overview
 This project aims to cluster cryptocurrencies using K-Means clustering and Principal Component Analysis (PCA) on normalized market data. 
 
+Table of Contents
 1. Prepare the Data
 2. Find the Best Value for k Using the Scaled DataFrame
 3. Cluster Cryptocurrencies with K-means Using the Scaled DataFrame
@@ -9,19 +11,22 @@ This project aims to cluster cryptocurrencies using K-Means clustering and Princ
 6. Cluster Cryptocurrencies with K-means Using the PCA DataFrame
 7. Visualize and Compare the Results
 
-
-Prepare the Data
+Details
+1. Prepare the Data
+   
 Normalize the Data by using StandardScaler() module from scikit-learn
 Create a DataFrame with the scaled data and set the"coin_id" index
 
 
-Find the Best Value for k Using the Scaled DataFrame
+2. Find the Best Value for k Using the Scaled DataFrame
+   
 Create k Values
 Calculate Inertia
 Plot Elbow Curve to determine the best value for k
 
 
-Cluster Cryptocurrencies with K-means Using the Scaled DataFrame
+3. Cluster Cryptocurrencies with K-means Using the Scaled DataFrame
+   
 Initialize the K-means model with the best value for k.
 Fit the K-means model using the scaled DataFrame
 Predict clusters to group the cyrptocurrencies
@@ -33,19 +38,22 @@ Create a scatter plot with:
     Include the "coin_id" column in the hover_cols parameter.
 
 
-Optimize Clusters with Principal Component Analysis
+4. Optimize Clusters with Principal Component Analysis
+   
 Perform PCA and reduce features to three principal components.
 Retrieve the explained variance to determine how much information can be attributed to each principal component. 
 Create a new PCA DataFramewith the scaled PCA data and set the "coin_id" index from the original DataFrame 
 
 
-Find the Best Value for k Using the PCA DataFrame
+5. Find the Best Value for k Using the PCA DataFrame
+   
 Create k Values
 Calculate Inertia
 Plot Elbow Curve to determine the best value for k
 
 
-Cluster Cryptocurrencies with K-means Using the PCA DataFrame
+6. Cluster Cryptocurrencies with K-means Using the PCA DataFrame
+   
 Initialize the K-means model with the best value for k.
 Fit the K-means model using the scaled PCA DataFrame
 Predict clusters to group the cyrptocurrencies
@@ -57,7 +65,8 @@ Create a scatter plot with:
     Include the "coin_id" column in the hover_cols parameter.
 
 
-Visualize and Compare the Results
+7.  Visualize and Compare the Results
+   
 Create composite plot by using hvPlot and + operator to compare elbow curve of the original scaled DataFrame and the PCA dataFrame
 Create composite plot by using hvPlot and + operator to compare cryptocurrency clusters of the original scaled DataFrame and the PCA dataFrame
 Analyse the impact of using fewer features to cluster the data using K-Means
